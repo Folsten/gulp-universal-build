@@ -1,3 +1,1 @@
-function letmeknow() {
-  console.log('sss')
-}
+alert('wefqqqq');
