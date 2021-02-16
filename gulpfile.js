@@ -7,9 +7,7 @@ const babel = require('gulp-babel');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const minify = require('gulp-minify');
-
 const postcss = require('gulp-postcss');
-
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
