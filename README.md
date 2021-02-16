@@ -1,14 +1,16 @@
 <h1>What is it?</h1>
 
-Minimalistic, universal build for fast site layout. It contains only important, necessary functionality.
+<p>Minimalistic, universal build for fast site layout. It contains only important, necessary functionality.
 
-• Live server with browser autoreload
-• SASS/SCSS to CSS
-• CSS minify
-• Images minify
-• JS minify
+<ul>
+  <li>• Live server with browser autoreload</li>
+  <li>• SASS/SCSS to CSS</li>
+  <li>• CSS minify</li>
+  <li>• Images minify</li>
+  <li>• JS minify</li>
+</ul>
 
-Also, this build have Tailwind CSS integration, but using it is optional, it is very easy to activate or disable it.
+Also, this build have Tailwind CSS integration, but using it is optional, it is very easy to activate or disable it.</p>
 
 <h1>How to use?</h1>
 
