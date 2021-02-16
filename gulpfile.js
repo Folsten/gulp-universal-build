@@ -7,24 +7,17 @@ const babel = require('gulp-babel');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const minify = require('gulp-minify');
+const cleanCSS = require('gulp-clean-css');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
-
-// function scssCompiler() {
-//   return src('src/scss/**/*.scss')
-//     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-//     .pipe(autoprefixer({ cascade: false }))
-//     .pipe(dest('build/css'))
-//     .pipe(dest('src/css'))
-//     .pipe(browserSync.stream())
-// }
 
 function scssCompiler() {
   return src('src/scss/**/*.scss')
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(postcss())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(dest('src/css'))
     .pipe(dest('build/css'))
     .pipe(browserSync.stream())
@@ -61,6 +54,11 @@ function cleanFiles() {
     .pipe(clean())
 }
 
+function makeCssEmpty() {
+  return src('src/css/**/*', {read: false})
+    .pipe(clean())
+}
+
 function devServer() {
   browserSync.init({ server: './src' })
   watch('src/scss/**/*.scss', scssCompiler)
@@ -68,6 +66,6 @@ function devServer() {
   watch('src/js/**/*.js').on('change', browserSync.reload)
 }
 
-exports.clean = series(cleanFiles)
+exports.clean = series(cleanFiles, makeCssEmpty)
 exports.dev = series(devServer)
-exports.build = series(cleanFiles, scssCompiler, jsCompiler, imgCompiler, fontsCompiler)
+exports.build = series(cleanFiles, makeCssEmpty, scssCompiler, jsCompiler, imgCompiler, fontsCompiler)

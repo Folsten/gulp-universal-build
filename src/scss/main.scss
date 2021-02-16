@@ -1,12 +1,13 @@
 @import "./variables/fonts.scss";
 @import "./variables/colors.scss";
 
+// >>> Let them be active in case you want to use Tailwind in the current project
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-  @apply text-2xl text-red-400;
+  font-size: 10px;
 }
 
 *,
