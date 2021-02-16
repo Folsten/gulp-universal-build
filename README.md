@@ -1,7 +1,7 @@
 <h1>What is it?</h1>
 
 <p>
-Minimalistic, universal build for fast site layout. It contains only important, necessary functionality, but of course as every other gulp build you can modify it depends on your needs.
+Minimalistic, universal build for fast site layout. It contains only important, necessary functionality, but of course you can modify it depends on your project needs.
 
 <ul>
   <li>Live server with browser autoreload</li>
