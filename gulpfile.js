@@ -7,15 +7,28 @@ const babel = require('gulp-babel');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const minify = require('gulp-minify');
+
+const postcss = require('gulp-postcss');
+
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
+// function scssCompiler() {
+//   return src('src/scss/**/*.scss')
+//     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+//     .pipe(autoprefixer({ cascade: false }))
+//     .pipe(dest('build/css'))
+//     .pipe(dest('src/css'))
+//     .pipe(browserSync.stream())
+// }
+
 function scssCompiler() {
   return src('src/scss/**/*.scss')
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({ cascade: false }))
-    .pipe(dest('build/css'))
+    .pipe(postcss())
     .pipe(dest('src/css'))
+    .pipe(dest('build/css'))
     .pipe(browserSync.stream())
 }
 

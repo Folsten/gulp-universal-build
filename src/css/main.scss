@@ -1,16 +1,17 @@
 @import './variables/fonts.scss';
+
 @import './variables/colors.scss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html {
-  @apply text-2xl text-red-400;
+  font-size: 10px;
+  color: orange;
+}
+
+p {
+  color: purple;
 }
 
 *,body {
-  // font-size: 5px;
   padding: 0;
   margin: 0;
 }
