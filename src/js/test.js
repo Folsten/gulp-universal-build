@@ -1,2 +1,0 @@
-alert('wefqqqq');
-alert('ssss');
