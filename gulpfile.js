@@ -1,6 +1,5 @@
 'use strict'
 
-const GulpClient = require('gulp');
 const { series, parallel, src, dest, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
@@ -47,7 +46,7 @@ function fontsCompiler() {
 
 // Never change directory to your source files (src directory)
 function cleanFiles() {
-  return src('build', { read: false })
+  return src('build/*', { read: false })
     .pipe(clean())
 }
 
