@@ -3,6 +3,7 @@
 const GulpClient = require('gulp');
 const { series, parallel, src, dest, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
+const clean = require('gulp-clean');
 const babel = require('gulp-babel');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
@@ -24,7 +25,12 @@ function jsCompiler() {
     .pipe(babel({
       presets: ['@babel/env']
     }))
-    .pipe(minify())
+    .pipe(minify({
+      ext: {
+        min: '.js'
+      },
+      noSource: true
+    }))
     .pipe(dest('build/js'))
 }
 
@@ -32,6 +38,12 @@ function imgCompiler() {
   return src('src/img/**/*')
   .pipe(imagemin())
   .pipe(dest('build/img'))
+}
+
+// Never change directory to your source files (src directory)
+function cleanFiles() {
+  return src('build/**/*', {read: false})
+    .pipe(clean())
 }
 
 function devServer() {
@@ -43,4 +55,4 @@ function devServer() {
 
 
 exports.dev = series(devServer)
-exports.build = series(scssCompiler, jsCompiler, imgCompiler)
+exports.build = series(cleanFiles, scssCompiler, jsCompiler, imgCompiler)

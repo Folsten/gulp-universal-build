@@ -1,3 +1,1 @@
-"use strict";
-
-alert('wefqqqq');
+"use strict";alert("wefqqqq"),alert("ssss");
