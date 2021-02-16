@@ -26,3 +26,5 @@ You have few basic commands declared in the package.json file:
   <li>"npm run clean" will clean the build folder and css folder in SRC path</li>
 </ul>
 </p>
+
+<bold>Created using Gulp v4<bold>
