@@ -27,4 +27,4 @@ You have few basic commands declared in the package.json file:
 </ul>
 </p>
 
-<bold>Created using Gulp v4<bold>
+<bold>Created using Gulp v4</bold>
