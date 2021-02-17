@@ -9,6 +9,10 @@ Minimalistic, universal build for fast site layout. It contains only important, 
   <li>CSS minify</li>
   <li>Images minify</li>
   <li>JS minify</li>
+  <li>Bootstrap integration (optional)</li>
+  <li>Tailwind CSS integration (optional)</li>
+  
+ Optional means you can easy and fast activate ot disable this feature.
 </ul>
 
 Also, this build have Tailwind CSS integration, but using it is optional, it is very easy to activate or disable it.
