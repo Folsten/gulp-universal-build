@@ -7,7 +7,11 @@
 // @tailwind utilities;
 
 // >>> Let one of them be active in case you want to use Bootstrap in your project <<<
+// @import "/node_modules/bootstrap/dist/css/bootstrap.min.css"; (everything)
+// @import "/node_modules/bootstrap/dist/css/bootstrap-grid.min.css"; (grid only)
+// @import "/node_modules//bootstrap/dist/css/bootstrap-reboot.min.css"; (reboot only)
 
+// >>> Basic styles <<<
 html {
   font-size: 10px;
 }
