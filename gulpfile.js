@@ -13,7 +13,7 @@ const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
 function scssCompiler() {
-  return src('src/scss/**/*.scss')
+  return src('src/scss/**/*.{scss,sass,css}')
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(postcss())
@@ -38,13 +38,13 @@ function jsCompiler() {
 }
 
 function imgCompiler() {
-  return src('src/img/**/*')
+  return src('src/img/**/*.{png,jpg,jpeg,gif,svg,webp}')
     .pipe(imagemin())
     .pipe(dest('build/img'))
 }
 
 function fontsCompiler() {
-  return src('src/fonts/**/*')
+  return src('src/fonts/**/*.{woff,woff2,ttf,otf,eot}')
     .pipe(dest('build/fonts'))
 }
 
