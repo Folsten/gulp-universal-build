@@ -2,9 +2,11 @@
 @import "./variables/colors.scss";
 
 // >>> Let them be active in case you want to use Tailwind in the current project <<<
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+// >>> Let one of them be active in case you want to use Bootstrap in your project <<<
 
 html {
   font-size: 10px;
