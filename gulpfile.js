@@ -12,6 +12,11 @@ const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
+function htmlCompiler() {
+  return src('src/*.{html,php}')
+    .pipe(dest('build'))
+}
+
 function scssCompiler() {
   return src('src/scss/**/*.{scss,sass,css}')
     .pipe(sass({ outputStyle: 'compressed' }))
@@ -68,4 +73,4 @@ function devServer() {
 
 exports.clean = series(cleanFiles, makeCssEmpty)
 exports.dev = series(devServer)
-exports.build = series(cleanFiles, makeCssEmpty, scssCompiler, jsCompiler, imgCompiler, fontsCompiler)
+exports.build = series(cleanFiles, htmlCompiler,makeCssEmpty, scssCompiler, jsCompiler, imgCompiler, fontsCompiler)
