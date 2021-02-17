@@ -1,7 +1,7 @@
 <h1>What is it?</h1>
 
 <p>
-Minimalistic, universal build for fast site layout. It contains only important, necessary functionality, but of course you can modify it depends on your project needs.
+Minimalistic, universal gulp build for fast site layout. It contains only important, necessary functionality, but of course you can modify it without any barriers.
 
 <ul>
   <li>Live server with browser autoreload</li>
@@ -9,13 +9,14 @@ Minimalistic, universal build for fast site layout. It contains only important, 
   <li>CSS minify</li>
   <li>Images minify</li>
   <li>JS minify</li>
-  <li>Bootstrap integration (optional)</li>
-  <li>Tailwind CSS integration (optional)</li>
-  
- Optional means you can easy and fast activate ot disable this feature.
 </ul>
 
-Also, this build have Tailwind CSS integration, but using it is optional, it is very easy to activate or disable it.
+Also, this build contains some optional features, that means you can easy and fast activate or disable them, depends on your project needs.
+
+<ul>
+  <li>Bootstrap integration (optional)</li>
+  <li>Tailwind CSS integration (optional)</li>
+</ul>
 </p>
 
 <h1>How to use?</h1>
