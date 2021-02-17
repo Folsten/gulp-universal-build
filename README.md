@@ -1,7 +1,7 @@
 <h1>What is it?</h1>
 
 <p>
-Minimalistic, universal gulp build for fast site layout. It contains only important, necessary functionality, but of course you can modify it without any barriers.
+Universal, minimalistic gulp build to make website layouts. It contains only important, necessary functionality, but of course you can modify it without any barriers.
 
 <ul>
   <li>Live server with browser autoreload</li>
@@ -11,7 +11,7 @@ Minimalistic, universal gulp build for fast site layout. It contains only import
   <li>JS minify</li>
 </ul>
 
-Also, this build contains some optional features, that means you can easy and fast activate or disable them, depends on your project needs.
+Also, this build contains some optional libs/frameworks integrations, that means you can easy and fast activate or disable them, depends on your personal needs.
 
 <ul>
   <li>Bootstrap integration (optional)</li>
