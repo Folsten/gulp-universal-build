@@ -18,7 +18,7 @@ function htmlCompiler() {
 }
 
 function scssCompiler() {
-  return src('src/scss/**/*.{scss,sass,css}')
+  return src('src/scss/top-level-styles/**/*.{scss,sass,css}')
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(postcss())
@@ -66,7 +66,7 @@ function makeCssEmpty() {
 
 function devServer() {
   browserSync.init({ server: './src' })
-  watch('src/scss/**/*.scss', scssCompiler)
+  watch('src/scss/**/*.{scss,sass,css}', scssCompiler)
   watch('src/*.html').on('change', browserSync.reload)
   watch('src/js/**/*.js').on('change', browserSync.reload)
 }
